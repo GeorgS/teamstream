@@ -1,6 +1,10 @@
 FlowRouter.route('/', {
   action() {
-    ReactLayout.render(MainLayout, {content: <Login />});
+    if (Meteor.userId()) {
+      FlowRouter.go('/dashboard');
+    } else {
+      ReactLayout.render(MainLayout, {content: <Login />});
+    }
   }
 });
 

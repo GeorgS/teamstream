@@ -1,4 +1,3 @@
-
 Login = React.createClass({
 
   sendVerification(event) {

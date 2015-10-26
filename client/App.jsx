@@ -19,9 +19,20 @@ App = React.createClass({
       currentUser: Meteor.user()
     }
   },
+
   render() {
+
+    var _team = []
+
+    _team.push(<Team />)
+
+    var team = TeamCollection.findOne(Meteor.user().profile.teams[0]).members;
+    for (var i = 0; i < team.length; i++) {
+      _team.push(<Person name={team[i]}/>);
+    }
+
     return (
-      <h1>{ this.data.currentUser ? 'welcome' : 'Not logged in!' }</h1>
+      <h1>{ this.data.currentUser ? _team : 'Not logged in!' }</h1>
     );
   }
 });

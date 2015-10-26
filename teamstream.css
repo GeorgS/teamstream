@@ -1,1 +1,12 @@
 /* CSS declarations go here */
+.ui.video-card {
+  border: 1px solid #ddd;
+}
+
+.ui.video-card video {
+
+}
+
+.ui.video-card .description {
+
+}

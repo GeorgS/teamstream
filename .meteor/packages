@@ -26,3 +26,5 @@ acemtp:accounts-passwordless
 semantic:ui-css
 kadira:flow-router
 kadira:react-layout
+fds:webrtc
+lepozepo:streams
